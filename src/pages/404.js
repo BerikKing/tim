@@ -70,7 +70,7 @@ const Page = () => (
             sx={{ mt: 3 }}
             variant="contained"
           >
-            Go back to dashboard
+            Артқа қайту
           </Button>
         </Box>
       </Container>
