@@ -11,6 +11,7 @@ import { CustomersTable } from "src/sections/customer/customers-table";
 // import { CustomersSearch } from 'src/sections/customer/customers-search';
 import { applyPagination } from "src/utils/apply-pagination";
 import { Pagination } from "@mui/material";
+import BasicTabs from "src/components/tabs";
 const now = new Date();
 
 const data = [
@@ -128,7 +129,7 @@ const Page = () => {
               rowsPerPage={rowsPerPage}
               selected={customersSelection.selected}
             /> */}
-            
+            <BasicTabs/>
           </Stack>
         </Container>
       </Box>
