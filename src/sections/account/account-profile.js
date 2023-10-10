@@ -9,13 +9,12 @@ import {
   Typography
 } from '@mui/material';
 
+// Профиль аккаунта
+
 const user = {
-  avatar: '/assets/avatars/avatar-anika-visser.png',
-  city: 'Los Angeles',
-  country: 'USA',
-  jobTitle: 'Senior Developer',
-  name: 'Anika Visser',
-  timezone: 'GTM-7'
+  avatar: '/assets/avatars/avatar.png',
+  city: 'Алматы',
+  name: 'Berik',
 };
 
 export const AccountProfile = () => (
@@ -46,13 +45,12 @@ export const AccountProfile = () => (
           color="text.secondary"
           variant="body2"
         >
-          {user.city} {user.country}
+          {user.city} 
         </Typography>
         <Typography
           color="text.secondary"
           variant="body2"
         >
-          {user.timezone}
         </Typography>
       </Box>
     </CardContent>
@@ -62,7 +60,7 @@ export const AccountProfile = () => (
         fullWidth
         variant="text"
       >
-        Upload picture
+        Фотоны ауыстыру
       </Button>
     </CardActions>
   </Card>

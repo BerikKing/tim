@@ -25,8 +25,8 @@ export const SettingsNotifications = () => {
     <form onSubmit={handleSubmit}>
       <Card>
         <CardHeader
-          subheader="Manage the notifications"
-          title="Notifications"
+          subheader="Хабарламаларды басқару"
+          title="Хабарлама"
         />
         <Divider />
         <CardContent>
@@ -42,7 +42,7 @@ export const SettingsNotifications = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h6">
-                  Notifications
+                  Хабарламалар
                 </Typography>
                 <Stack>
                   <FormControlLabel
@@ -51,15 +51,15 @@ export const SettingsNotifications = () => {
                   />
                   <FormControlLabel
                     control={<Checkbox defaultChecked />}
-                    label="Push Notifications"
+                    label="Push Хабарламалар"
                   />
                   <FormControlLabel
                     control={<Checkbox />}
-                    label="Text Messages"
+                    label="Жазбаша хабарлама"
                   />
                   <FormControlLabel
                     control={<Checkbox defaultChecked />}
-                    label="Phone calls"
+                    label="Қоңыраулар"
                   />
                 </Stack>
               </Stack>
@@ -72,7 +72,7 @@ export const SettingsNotifications = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h6">
-                  Messages
+                  Жазбаша Хабарламалар
                 </Typography>
                 <Stack>
                   <FormControlLabel
@@ -81,11 +81,11 @@ export const SettingsNotifications = () => {
                   />
                   <FormControlLabel
                     control={<Checkbox />}
-                    label="Push Notifications"
+                    label="Push Хабарламалар"
                   />
                   <FormControlLabel
                     control={<Checkbox defaultChecked />}
-                    label="Phone calls"
+                    label="Қоңыраулар"
                   />
                 </Stack>
               </Stack>
@@ -95,7 +95,7 @@ export const SettingsNotifications = () => {
         <Divider />
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button variant="contained">
-            Save
+            Сақтау
           </Button>
         </CardActions>
       </Card>

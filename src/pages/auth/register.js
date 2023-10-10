@@ -14,6 +14,7 @@ const Page = () => {
     initialValues: {
       email: '',
       name: '',
+      phoneNumber: '',
       password: '',
       submit: null
     },
@@ -23,6 +24,11 @@ const Page = () => {
         .email('Жарамды email болуы керек')
         .max(255)
         .required('Email қажет'),
+      phoneNumber: Yup
+        .string()
+        .max(255)
+        .required('Телефон номер қажет')
+        .matches(/^\+(?:[0-9] ?){6,14}[0-9]$/, 'Дұрыс формат енгізіңіз!'),
       name: Yup
         .string()
         .max(255)
@@ -34,7 +40,7 @@ const Page = () => {
     }),
     onSubmit: async (values, helpers) => {
       try {
-        await auth.signUp(values.email, values.name, values.password);
+        await auth.signUp(values.email, values.phoneNumber, values.name, values.password);
         router.push('/');
       } catch (err) {
         helpers.setStatus({ success: false });
@@ -48,7 +54,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Register
+          Тіркелу
         </title>
       </Head>
       <Box
@@ -105,6 +111,17 @@ const Page = () => {
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
                   value={formik.values.name}
+                />
+                <TextField
+                  error={!!(formik.touched.phoneNumber && formik.errors.phoneNumber)}
+                  fullWidth
+                  helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
+                  label="Телефон номеріңіз"
+                  name="phoneNumber"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  type="tel"
+                  value={formik.values.phoneNumber}
                 />
                 <TextField
                   error={!!(formik.touched.email && formik.errors.email)}

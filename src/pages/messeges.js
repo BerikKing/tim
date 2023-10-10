@@ -8,7 +8,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Жеке кабинет
+        Хабарламалар
       </title>
     </Head>
     <Box
@@ -22,7 +22,7 @@ const Page = () => (
         <Stack spacing={3}>
           <div>
             <Typography variant="h4">
-              Жеке кабинет
+                Хабарламалар
             </Typography>
           </div>
           <div>
@@ -35,14 +35,14 @@ const Page = () => (
                 md={6}
                 lg={4}
               >
-                <AccountProfile />
+                {/* <AccountProfile /> */}
               </Grid>
               <Grid
                 xs={12}
                 md={6}
                 lg={8}
               >
-                <AccountProfileDetails />
+                {/* <AccountProfileDetails /> */}
               </Grid>
             </Grid>
           </div>

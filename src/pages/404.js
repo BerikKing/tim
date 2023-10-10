@@ -7,8 +7,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        404 | TIB Logistic
-
+        404
       </title>
     </Head>
     <Box

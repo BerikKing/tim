@@ -8,6 +8,7 @@ export const OverviewBudget = (props) => {
   const { difference, positive = false, sx, value } = props;
 
   return (
+    
     <Card sx={sx}>
       <CardContent>
         <Stack
@@ -16,28 +17,28 @@ export const OverviewBudget = (props) => {
           justifyContent="space-between"
           spacing={3}
         >
+
           <Stack spacing={1}>
             <Typography
               color="text.secondary"
-              variant="overline"
-            >
-              Budget
+              variant="h4"
+    >
             </Typography>
             <Typography variant="h4">
-              {value}
+            Тапсырыс беру үшін
             </Typography>
           </Stack>
-          <Avatar
+          {/* <Avatar
             sx={{
               backgroundColor: 'error.main',
               height: 56,
               width: 56
             }}
-          >
-            <SvgIcon>
+          > */}
+            {/* <SvgIcon>
               <CurrencyDollarIcon />
-            </SvgIcon>
-          </Avatar>
+            </SvgIcon> */}
+          {/* </Avatar> */}
         </Stack>
         {difference && (
           <Stack
@@ -51,25 +52,25 @@ export const OverviewBudget = (props) => {
               direction="row"
               spacing={0.5}
             >
-              <SvgIcon
+                
+              {/* <SvgIcon
                 color={positive ? 'success' : 'error'}
                 fontSize="small"
               >
                 {positive ? <ArrowUpIcon /> : <ArrowDownIcon />}
-              </SvgIcon>
-              <Typography
+              </SvgIcon> */}
+              {/* <Typography
                 color={positive ? 'success.main' : 'error.main'}
                 variant="body2"
               >
                 {difference}%
-              </Typography>
+              </Typography> */}
             </Stack>
-            <Typography
+            {/* <Typography
               color="text.secondary"
               variant="caption"
             >
-              Since last month
-            </Typography>
+            </Typography> */}
           </Stack>
         )}
       </CardContent>

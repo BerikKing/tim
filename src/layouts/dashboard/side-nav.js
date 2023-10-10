@@ -18,6 +18,8 @@ import { Scrollbar } from 'src/components/scrollbar';
 import { items } from './config';
 import { SideNavItem } from './side-nav-item';
 
+
+// Боквой панель где логотип
 export const SideNav = (props) => {
   const { open, onClose } = props;
   const pathname = usePathname();
@@ -36,16 +38,14 @@ export const SideNav = (props) => {
       }}
     >
       <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%'
-        }}
+        // sx={{
+        //   display: 'flex',
+        //   flexDirection: 'column',
+        //   height: '100%'
+        // }}
       >
         <Box sx={{ p: 3 }}>
           <Box
-            component={NextLink}
-            href="/"
             sx={{
               display: 'inline-flex',
               height: 32,
@@ -55,13 +55,18 @@ export const SideNav = (props) => {
             <Logo />
           </Box>
           <Box
+          component={NextLink}
+          href="/"
             sx={{
               alignItems: 'center',
               backgroundColor: 'rgba(255, 255, 255, 0.04)',
               borderRadius: 1,
               cursor: 'pointer',
               display: 'flex',
-              justifyContent: 'space-between',
+              justifyContent: 'center',
+              textDecoration: 'none',
+              color: 'neutral.100',
+              fontSize: '',
               mt: 2,
               p: '12px'
             }}
@@ -71,20 +76,20 @@ export const SideNav = (props) => {
                 color="inherit"
                 variant="subtitle1"
               >
-                Devias
+                TIB Logistics
               </Typography>
-              <Typography
+              {/* <Typography
                 color="neutral.400"
                 variant="body2"
               >
-                Production
-              </Typography>
+                Logistics
+              </Typography> */}
             </div>
             <SvgIcon
               fontSize="small"
               sx={{ color: 'neutral.500' }}
             >
-              <ChevronUpDownIcon />
+              {/* <ChevronUpDownIcon /> */}
             </SvgIcon>
           </Box>
         </Box>
@@ -123,26 +128,26 @@ export const SideNav = (props) => {
             })}
           </Stack>
         </Box>
-        <Divider sx={{ borderColor: 'neutral.700' }} />
+        {/* <Divider sx={{ borderColor: 'neutral.700' }} /> */}
         <Box
           sx={{
             px: 2,
             py: 3
           }}
         >
-          <Typography
+          {/* <Typography
             color="neutral.100"
             variant="subtitle2"
           >
             Need more features?
-          </Typography>
-          <Typography
+          </Typography> */}
+          {/* <Typography
             color="neutral.500"
             variant="body2"
           >
             Check out our Pro solution template.
-          </Typography>
-          <Box
+          </Typography> */}
+          {/* <Box
             sx={{
               display: 'flex',
               mt: 2,
@@ -157,8 +162,8 @@ export const SideNav = (props) => {
               alt="Go to pro"
               src="/assets/devias-kit-pro.png"
             />
-          </Box>
-          <Button
+          </Box> */}
+          {/* <Button
             component="a"
             endIcon={(
               <SvgIcon fontSize="small">
@@ -172,7 +177,7 @@ export const SideNav = (props) => {
             variant="contained"
           >
             Pro Live Preview
-          </Button>
+          </Button> */}
         </Box>
       </Box>
     </Scrollbar>
@@ -198,6 +203,7 @@ export const SideNav = (props) => {
   }
 
   return (
+    
     <Drawer
       anchor="left"
       onClose={onClose}

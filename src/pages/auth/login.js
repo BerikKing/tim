@@ -22,7 +22,7 @@ import { Layout as AuthLayout } from 'src/layouts/auth/layout';
 const Page = () => {
   const router = useRouter();
   const auth = useAuth();
-  const [method, setMethod] = useState('email');
+  const [method, setMethod] = useState('email', 'phoneNumber');
   const formik = useFormik({
     initialValues: {
       email: 'demo@gmail.com',
@@ -30,6 +30,7 @@ const Page = () => {
       password: 'Password123!',
       submit: null
     },
+   
     validationSchema: Yup.object({
       email: Yup
         .string()
@@ -38,7 +39,7 @@ const Page = () => {
         .required('Email қажет'),
       phoneNumber: Yup
         .string()
-        .required('Жарамды телефон номер керек')
+        .required('Телефон номер қажет')
         .matches(/^\+(?:[0-9] ?){6,14}[0-9]$/, 'Дұрыс формат енгізіңіз!'),
       password: Yup
         .string()
@@ -77,7 +78,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Login
+          Кіру
         </title>
       </Head>
       <Box
@@ -127,12 +128,12 @@ const Page = () => {
               value={method}
             >
               <Tab
-                label="Email"
-                value="email"
+                label="Телефон номеріңіз" 
+                value="phoneNumber"
               />
               <Tab
-                label="Телефон номеріңіз"
-                value="phoneNumber"
+                label="Email"
+                value="email"
               />
             </Tabs>
             {method === 'email' && (
@@ -146,7 +147,8 @@ const Page = () => {
                     fullWidth
                     helperText={formik.touched.email && formik.errors.email}
                     label="Email"
-                    name="email"
+                    name="email"                          
+                    placeholder="example@gmail.com"
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
                     type="email"
@@ -164,9 +166,9 @@ const Page = () => {
                     value={formik.values.password}
                   />
                 </Stack>
-                <FormHelperText sx={{ mt: 1 }}>
+                {/* <FormHelperText sx={{ mt: 1 }}>
                 Қажет болса, өткізіп жіберуге болады.
-                </FormHelperText>
+                </FormHelperText> */}
                 {formik.errors.submit && (
                   <Typography
                     color="error"
@@ -216,6 +218,7 @@ const Page = () => {
                   helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
                   label="Телефон номеріңіз"
                   name="phoneNumber"
+                  placeholder="+7001234567"
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
                   type="phonr"
@@ -233,9 +236,9 @@ const Page = () => {
                   value={formik.values.password}
                 />
               </Stack>
-              <FormHelperText sx={{ mt: 1 }}>
+              {/* <FormHelperText sx={{ mt: 1 }}>
               Қажет болса, өткізіп жіберуге болады.
-              </FormHelperText>
+              </FormHelperText> */}
               {formik.errors.submit && (
                 <Typography
                   color="error"

@@ -152,7 +152,7 @@ export const AuthProvider = (props) => {
   };
 
   const signUp = async (email, name, password) => {
-    throw new Error('Тіркелу орындалмады');
+    throw new Error('Тіркелу орындалмады' );
   };
 
   const signOut = () => {

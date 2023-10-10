@@ -37,8 +37,8 @@ export const SettingsPassword = () => {
     <form onSubmit={handleSubmit}>
       <Card>
         <CardHeader
-          subheader="Update password"
-          title="Password"
+          subheader="Парольді жаңарту"
+          title="Пароль"
         />
         <Divider />
         <CardContent>
@@ -48,7 +48,7 @@ export const SettingsPassword = () => {
           >
             <TextField
               fullWidth
-              label="Password"
+              label="Пароль"
               name="password"
               onChange={handleChange}
               type="password"
@@ -56,7 +56,7 @@ export const SettingsPassword = () => {
             />
             <TextField
               fullWidth
-              label="Password (Confirm)"
+              label="Пароль (Қайталау)"
               name="confirm"
               onChange={handleChange}
               type="password"
@@ -67,7 +67,7 @@ export const SettingsPassword = () => {
         <Divider />
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button variant="contained">
-            Update
+            Жаңарту
           </Button>
         </CardActions>
       </Card>

@@ -7,37 +7,41 @@ import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import { SvgIcon } from '@mui/material';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import HomeIcon from '@mui/icons-material/Home';
 
+// Правый боковой панель
 export const items = [
   {
-    title: 'Overview',
+    title: 'Басты бет',
     path: '/',
     icon: (
       <SvgIcon fontSize="small">
-        <ChartBarIcon />
+        <HomeIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'Customers',
-    path: '/customers',
+    title: 'Тапсырыстар',
+    path: '/orders',
     icon: (
       <SvgIcon fontSize="small">
-        <UsersIcon />
+        <AddShoppingCartIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'Companies',
-    path: '/companies',
+    title: 'Тарифтер',
+    path: '/tariffs',
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <PriceChangeIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'Account',
+    title: 'Жеке кабинет',
     path: '/account',
     icon: (
       <SvgIcon fontSize="small">
@@ -46,7 +50,7 @@ export const items = [
     )
   },
   {
-    title: 'Settings',
+    title: 'Баптаулар',
     path: '/settings',
     icon: (
       <SvgIcon fontSize="small">
@@ -54,31 +58,31 @@ export const items = [
       </SvgIcon>
     )
   },
-  {
-    title: 'Login',
-    path: '/auth/login',
-    icon: (
-      <SvgIcon fontSize="small">
-        <LockClosedIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Register',
-    path: '/auth/register',
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserPlusIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Error',
-    path: '/404',
-    icon: (
-      <SvgIcon fontSize="small">
-        <XCircleIcon />
-      </SvgIcon>
-    )
-  }
+//   {
+//     title: 'Login',
+//     path: '/auth/login',
+//     icon: (
+//       <SvgIcon fontSize="small">
+//         <LockClosedIcon />
+//       </SvgIcon>
+//     )
+//   },
+//   {
+//     title: 'Register',
+//     path: '/auth/register',
+//     icon: (
+//       <SvgIcon fontSize="small">
+//         <UserPlusIcon />
+//       </SvgIcon>
+//     )
+//   },
+//   {
+//     title: 'Error',
+//     path: '/404',
+//     icon: (
+//       <SvgIcon fontSize="small">
+//         <XCircleIcon />
+//       </SvgIcon>
+//     )
+//   }
 ];
