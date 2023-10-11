@@ -7,11 +7,11 @@ import PlusIcon from "@heroicons/react/24/solid/PlusIcon";
 import { Box, Button, Container, Stack, SvgIcon, Typography } from "@mui/material";
 import { useSelection } from "src/hooks/use-selection";
 import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
-import { CustomersTable } from "src/sections/customer/customers-table";
 // import { CustomersSearch } from 'src/sections/customer/customers-search';
 import { applyPagination } from "src/utils/apply-pagination";
 import { Pagination } from "@mui/material";
 import BasicTabs from "src/components/tabs";
+import CustomsTable from "src/sections/orders/customers-table";
 const now = new Date();
 
 const data = [
@@ -130,6 +130,7 @@ const Page = () => {
               selected={customersSelection.selected}
             /> */}
             <BasicTabs/>
+            <CustomsTable/>
           </Stack>
         </Container>
       </Box>

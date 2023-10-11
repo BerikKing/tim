@@ -19,8 +19,7 @@ import { CompaniesSearch } from 'src/sections/companies/companies-search';
 const companies = [
   {
     id: '2569ce0d517a7f06d3ea1f24',
-    createdAt: '27/03/2019',
-    title: 'Dropbox',
+    title: 'Тарифы',
   },
  
 ];
