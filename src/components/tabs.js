@@ -72,34 +72,7 @@ export default function BasicTabs() {
         </Tabs>
         
       </Box>
-      <CustomTabPanel value={value} 
-      index={0}>
-        Күтілуде
-      </CustomTabPanel>
-      <CustomTabPanel value={value}
-       index={1}>
-        Қоймада
-      </CustomTabPanel>
-      <CustomTabPanel value={value} 
-      index={2}>
-        Жолда
-      </CustomTabPanel>
-      <CustomTabPanel value={value} 
-      index={3}>
-        Cұрыптау
-      </CustomTabPanel>
-      <CustomTabPanel value={value}
-       index={4}>
-        Жеткізілуде
-      </CustomTabPanel>
-      <CustomTabPanel value={value} 
-      index={5}>
-        Бөлімше
-      </CustomTabPanel>
-      <CustomTabPanel value={value} 
-      index={6}>
-        Алынды
-      </CustomTabPanel>
+      
     </Box>
   );
 }

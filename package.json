@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ant-design/compatible": "^5.1.2",
+    "@ant-design/cssinjs": "^1.17.0",
     "@emotion/cache": "11.10.5",
     "@emotion/react": "11.10.6",
     "@emotion/server": "11.10.0",
@@ -36,9 +37,9 @@
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",
     "rc-tween-one": "^3.0.6",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-apexcharts": "1.4.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "simplebar-react": "^3.2.1",
     "yup": "1.0.0"
   },
@@ -48,6 +49,7 @@
     "@types/numeral": "2.0.2",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "autoprefixer": "^10.4.16",
     "babel-plugin-import": "^1.13.8",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6"
